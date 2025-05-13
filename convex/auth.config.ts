@@ -1,9 +1,10 @@
 
+
 export default {
   providers: [
     {
-      domain: process.env.VITE_CLERK_FRONTEND_API_URL,
+      domain: "https://close-monster-77.clerk.accounts.dev/",
       applicationID: "convex",
     },
-  ]
+  ],
 };

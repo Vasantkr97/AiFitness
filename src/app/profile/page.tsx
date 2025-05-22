@@ -15,7 +15,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import CornerElements from "@/components/CornerELements";
-import NoFitnessPlan from "@/components/NofitnessPlan";
+import NoFitnessPlan from "@/components/NoFitnessPlan";
 
 const ProfilePage = () => {
   const { user } = useUser();

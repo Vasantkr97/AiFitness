@@ -9,20 +9,20 @@ const Navbar = () => {
   const { isSignedIn } = useUser();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-md border-b border-border py-3">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border py-4">
       <div className="container mx-auto flex items-center justify-between">
         {/* LOGO */}
-        <Link href="/" className="flex items-center gap-2">
-          <div className="p-1 bg-primary/10 rounded">
-            <ZapIcon className="w-4 h-4 text-primary" />
+        <Link href="/" className="flex items-center gap-2 group">
+          <div className="p-2 bg-primary/10 rounded-xl group-hover:bg-primary/20 transition-colors">
+            <DumbbellIcon className="w-5 h-5 text-primary" />
           </div>
-          <span className="text-xl font-bold font-mono">
+          <span className="text-xl font-bold">
             Fit<span className="text-primary">Guide</span>.ai
           </span>
         </Link>
 
         {/* NAVIGATION */}
-        <nav className="flex items-center gap-5">
+        <nav className="flex items-center gap-6">
           {isSignedIn ? (
             <>
               <Link
@@ -51,7 +51,7 @@ const Navbar = () => {
               <Button
                 asChild
                 variant="outline"
-                className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10"
+                className="ml-2 border-primary/50 text-primary hover:text-white hover:bg-primary/10 rounded-full"
               >
                 <Link href="/generate-program">Get Started</Link>
               </Button>
@@ -62,14 +62,14 @@ const Navbar = () => {
               <SignInButton>
                 <Button
                   variant={"outline"}
-                  className="border-primary/50 text-primary hover:text-white hover:bg-primary/10"
+                  className="border-primary/50 text-primary hover:text-white hover:bg-primary/10 rounded-full"
                 >
                   Sign In
                 </Button>
               </SignInButton>
 
               <SignUpButton>
-                <Button className="bg-primary text-primary-foreground hover:bg-primary/90">
+                <Button className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full">
                   Sign Up
                 </Button>
               </SignUpButton>
